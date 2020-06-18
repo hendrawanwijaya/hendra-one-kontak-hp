@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactListFragment">
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="one.hendra.kontakhp.ui.contactList.ContactListFragment"
+        android:label="Daftar Kontak"
+        tools:layout="@layout/fragment_contact_list">
+        <action
+            android:id="@+id/action_contactListFragment_to_contactDetailFragment"
+            app:destination="@id/contactDetailFragment">
+            <argument
+                android:name="contactId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/contactAddFragment"
+        android:name="one.hendra.kontakhp.ui.contactAdd.ContactAddFragment"
+        android:label="Tambah Kontak" />
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="one.hendra.kontakhp.ui.contactDetail.ContactDetailFragment"
+        android:label="Detail Kontak" />
+</navigation>
